@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/board-game-collection-visualizer/static/css/main.5facb584.chunk.css",
+    "main.js": "/board-game-collection-visualizer/static/js/main.0740cc24.chunk.js",
+    "main.js.map": "/board-game-collection-visualizer/static/js/main.0740cc24.chunk.js.map",
+    "runtime-main.js": "/board-game-collection-visualizer/static/js/runtime-main.9308b68e.js",
+    "runtime-main.js.map": "/board-game-collection-visualizer/static/js/runtime-main.9308b68e.js.map",
+    "static/js/2.c607d2fe.chunk.js": "/board-game-collection-visualizer/static/js/2.c607d2fe.chunk.js",
+    "static/js/2.c607d2fe.chunk.js.map": "/board-game-collection-visualizer/static/js/2.c607d2fe.chunk.js.map",
+    "index.html": "/board-game-collection-visualizer/index.html",
+    "precache-manifest.76a0eb14d439b9ddbc22cb3c97e004f1.js": "/board-game-collection-visualizer/precache-manifest.76a0eb14d439b9ddbc22cb3c97e004f1.js",
+    "service-worker.js": "/board-game-collection-visualizer/service-worker.js",
+    "static/css/main.5facb584.chunk.css.map": "/board-game-collection-visualizer/static/css/main.5facb584.chunk.css.map",
+    "static/js/2.c607d2fe.chunk.js.LICENSE.txt": "/board-game-collection-visualizer/static/js/2.c607d2fe.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9308b68e.js",
+    "static/js/2.c607d2fe.chunk.js",
+    "static/css/main.5facb584.chunk.css",
+    "static/js/main.0740cc24.chunk.js"
+  ]
+}
