@@ -4,8 +4,8 @@ Check it out at [https://duncgibbs.github.io/board-game-collection-visualizer/](
 
 I will eventually add:
 
-[x] Sorting
-[] Filtering
-[] An Individual Game Inspector
-[] A Display Mode
+- [x] Sorting
+- [ ] Filtering
+- [ ] An Individual Game Inspector
+- [ ] A Display Mode
 
