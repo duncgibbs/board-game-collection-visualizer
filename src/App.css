@@ -1,0 +1,32 @@
+.board-game-gallery {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height: 90vh;
+	margin: 5px 5px;
+}
+
+.search-bar {
+	padding: 10px 20px;
+	background: #3f3a60;
+}
+
+.search-bar > .MuiFormControl-root {
+    margin-right: 20px;
+}
+
+body {
+    margin: 0px 0px;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+	border-color: #FF5100 !important;
+}
+
+.MuiFormLabel-root {
+    color: #FF5100 !important;
+}
+
+.MuiOutlinedInput-input {
+    color: #FFF !important;
+}
+

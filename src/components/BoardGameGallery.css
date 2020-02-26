@@ -1,0 +1,19 @@
+.MuiGridListTileBar-root {
+    height: 81px !important;
+}
+
+.game-info-bar > .title {
+	font-weight: bold;
+}
+
+.game-info-bar > .players {
+
+}
+
+.game-info-bar > .time {
+
+}
+
+.game-info-bar svg {
+    margin-right: 5px;
+}

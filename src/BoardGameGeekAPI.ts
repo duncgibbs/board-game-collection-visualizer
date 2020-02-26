@@ -1,6 +1,7 @@
 type CollectionDataObject = {
 	id: string | null;
 	name: string | null;
+	description: string | null;
 	image: string | null;
 	thumbnail: string | null;
 	yearpublished: string | null;
@@ -29,6 +30,7 @@ const getDataObjectFromThing = (thing: Element): CollectionDataObject => {
     return {
 		id: thing.getAttribute('id'),
 		name: thing.querySelector('name[type="primary"]')!.getAttribute('value'),
+		description: thing.getElementsByTagName('description')[0].innerHTML,
 		image: thing.getElementsByTagName('image')[0].innerHTML,
         thumbnail: thing.getElementsByTagName('thumbnail')[0].innerHTML,
         yearpublished: getTagValue(thing, 'yearpublished'),
@@ -46,7 +48,7 @@ const getDataObjectFromThing = (thing: Element): CollectionDataObject => {
 	};
 };
 
-let BoardGameGeekAPI = {
+const BoardGameGeekAPI = {
     getCollectionForUser: (username: string) => {
         return fetch(`https://www.boardgamegeek.com/xmlapi2/collection?username=${username}&excludesubtype=boardgameexpansion&own=1`)
             .then((response: Response) => response.text())
