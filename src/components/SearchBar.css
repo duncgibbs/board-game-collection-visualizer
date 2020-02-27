@@ -1,0 +1,32 @@
+.search-bar {
+	padding: 10px 20px;
+	background: #3f3a60;
+	display: flex;
+}
+
+.search-bar > .search-bar-input {
+	color: #FF5100;
+	border-color: #FF5100;
+    margin-right: 20px;
+}
+
+.search-bar .search-bar-button {
+	border-radius: 0;
+	color: #FF5100;
+	border-left: #FF5100 1px solid;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
+	border-color: #FF5100 !important;
+}
+
+.MuiFormLabel-root {
+    color: #FF5100 !important;
+}
+
+.MuiOutlinedInput-input {
+    color: #FFF !important;
+}
+

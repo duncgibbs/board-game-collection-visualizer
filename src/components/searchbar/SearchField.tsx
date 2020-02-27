@@ -21,7 +21,7 @@ export default function SearchField(props: SearchFieldProps) {
     useEffect(() => {
         const urlParams = new URLSearchParams(window.location.search);
 
-        if (urlParams.has('username') /*&& search !== urlParams.get('username')*/) {
+        if (urlParams.has('username')) {
 			updateUsername(urlParams.get('username') as string);
 			setSearch(urlParams.get('username') as string);
         }
