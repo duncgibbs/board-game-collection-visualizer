@@ -61,6 +61,10 @@ const BoardGameGeekAPI = {
                     const id = collectionItem.getAttribute('objectid')!;
                     return BoardGameGeekAPI.getBoardGame(id);
                 }));
+            })
+            .catch((error) => {
+				console.log(`Error: ${error}`);
+				return [{error: error}];
             });
     },
 

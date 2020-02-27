@@ -5,28 +5,17 @@
 	margin: 5px 5px;
 }
 
-.search-bar {
-	padding: 10px 20px;
-	background: #3f3a60;
-}
-
-.search-bar > .MuiFormControl-root {
-    margin-right: 20px;
-}
-
 body {
     margin: 0px 0px;
 }
 
-.MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {
-	border-color: #FF5100 !important;
+.bgg-error {
+	text-align: center;
+	display: flex;
+	height: 300px;
+	align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+    font-size: x-large;
+    color: rgba(0,0,0, .5);
 }
-
-.MuiFormLabel-root {
-    color: #FF5100 !important;
-}
-
-.MuiOutlinedInput-input {
-    color: #FFF !important;
-}
-

@@ -8,6 +8,21 @@ function App() {
     let [collection, setCollection] = useState(Array<Record<string, any>>());
     let [collectionSort, setCollectionSort] = useState('name');
 
+	let gallery;
+
+    if (collection.length && collection[0].hasOwnProperty('error')) {
+        gallery = (
+			<div className='bgg-error'>
+				<div>
+        			Sorry, something has gone wrong.<br/>
+    				Try again in a few minutes.
+    			</div>
+			</div>
+        );
+    } else {
+		gallery = (<BoardGameGallery games={collection} sort={collectionSort} />);
+    }
+
 	return (
 		<div className="App">
 			<SearchBar
@@ -16,7 +31,7 @@ function App() {
 				collectionSort={collectionSort}
 				setCollectionSort={setCollectionSort}
 			/>
-          	<BoardGameGallery games={collection} sort={collectionSort} />
+          	{gallery}
     	</div>
   	);
 }
