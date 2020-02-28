@@ -16,6 +16,8 @@ type BoardGameGalleryProps = {
 };
 
 export default function BoardGameGallery(props: BoardGameGalleryProps) {
+	const rangeFilters = ['playercount', 'playtime', 'yearpublished'];
+    
     const sortGames = (games: Array<Record<string, any>>) => {
 		const ascendingSorts = ['maxplayers'];
         games.sort((gameOne, gameTwo) => {
@@ -33,13 +35,18 @@ export default function BoardGameGallery(props: BoardGameGalleryProps) {
 
     const filterGames = (games: Array<Record<string, any>>) => {
         let filteredGames = games;
-		if (props.filters['playercount']) {
-    		const minPlayers = props.filters['playercount'][0];
-    		const maxPlayers = props.filters['playercount'][1];
-			filteredGames = filteredGames.filter(game => {
-				return (game.minplayers >= minPlayers && game.maxplayers <= maxPlayers);
-			});
-		}
+
+        Object.keys(props.filters).forEach(filterKey => {
+			if (rangeFilters.includes(filterKey)) {
+    			const filter = props.filters[filterKey] as Record<string, any>;
+				filteredGames = filteredGames.filter(game => {
+					return (
+						game[filter.min.property] >= filter.min.value &&
+						game[filter.max.property] <= filter.max.value
+					);
+				});
+			}
+        });
 
 		return filteredGames;
     };

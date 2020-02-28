@@ -3,48 +3,54 @@ import React, { useState } from 'react';
 import Slider from '@material-ui/core/Slider';
 import Typography from '@material-ui/core/Typography';
 
-type PlayerCountFilterProps = {
-	playerCounts: Record<string, number>;
+type RangeSliderFilterProps = {
+    title: string;
+    classes: string;
+	range: Record<string, number>;
 	currentFilter?: number[];
-	setPlayerCountFilter: (count: number[]) => void;
+	step?: number | null;
+	track: false | 'normal' | 'inverted';
+	setFilter: (count: number[]) => void;
 };
 
-export default function PlayerCountFilter(props: PlayerCountFilterProps) {
-	const [playerCount, setPlayerCount] = useState(() => {
+export default function RangeSliderFilter(props: RangeSliderFilterProps) {
+	const [value, setValue] = useState(() => {
 		if (props.currentFilter) {
         	return props.currentFilter;
         } else {
-            return [props.playerCounts.min, props.playerCounts.max];
+            return [props.range.min, props.range.max];
         }
     });
 
 	const handleChange = (event: any, newValue: number | number[]) => {
-        setPlayerCount(newValue as number[]);
+        setValue(newValue as number[]);
 	};
 
 	const handleChangeCommit = (event: any, filterValue: number | number[]) => {
-		props.setPlayerCountFilter(filterValue as number[]);
+		props.setFilter(filterValue as number[]);
 	};
     
 	return (
-		<div className='player-count-filter'>
+		<div className={props.classes}>
 			<Typography id='range-slider' variant='h6' gutterBottom>
-				Player Count
+				{props.title}
 			</Typography>
 			<Typography variant='subtitle1'>
-				{playerCount[0]} - {playerCount[1]}
+				{value[0]} - {value[1]}
     		</Typography>
             <Slider
-                value={playerCount}
+                value={value}
                 onChange={handleChange}
                 onChangeCommitted={handleChangeCommit}
                 valueLabelDisplay='off'
                 aria-labelledby='range-slider'
-                min={props.playerCounts.min}
-                max={props.playerCounts.max}
-                step={1}
+                min={props.range.min}
+                max={props.range.max}
+                track={props.track}
                 marks={true}
+                step={props.step}
             />
 		</div>
 	);
 };
+
