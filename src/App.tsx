@@ -5,8 +5,9 @@ import SearchBar from './components/SearchBar';
 import './App.css';
 
 function App() {
-    let [collection, setCollection] = useState(Array<Record<string, any>>());
-    let [collectionSort, setCollectionSort] = useState('name');
+    const [collection, setCollection] = useState(Array<Record<string, any>>());
+    const [collectionSort, setCollectionSort] = useState('name');
+    const [collectionFilters, setCollectionFilters] = useState({});
 
 	let gallery;
 
@@ -20,7 +21,13 @@ function App() {
 			</div>
         );
     } else {
-		gallery = (<BoardGameGallery games={collection} sort={collectionSort} />);
+		gallery = (
+			<BoardGameGallery
+				games={collection}
+				sort={collectionSort}
+				filters={collectionFilters}
+			/>
+		);
     }
 
 	return (
@@ -30,6 +37,7 @@ function App() {
 				setCollection={setCollection}
 				collectionSort={collectionSort}
 				setCollectionSort={setCollectionSort}
+				setCollectionFilters={setCollectionFilters}
 			/>
           	{gallery}
     	</div>

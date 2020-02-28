@@ -12,6 +12,7 @@ import './BoardGameGallery.css';
 type BoardGameGalleryProps = {
 	games: Array<Record<string, any>>;
 	sort: string;
+	filters: Record<string, any>;
 };
 
 export default function BoardGameGallery(props: BoardGameGalleryProps) {
@@ -28,6 +29,19 @@ export default function BoardGameGallery(props: BoardGameGalleryProps) {
     	});
 
     	return games;
+    };
+
+    const filterGames = (games: Array<Record<string, any>>) => {
+        let filteredGames = games;
+		if (props.filters['playercount']) {
+    		const minPlayers = props.filters['playercount'][0];
+    		const maxPlayers = props.filters['playercount'][1];
+			filteredGames = filteredGames.filter(game => {
+				return (game.minplayers >= minPlayers && game.maxplayers <= maxPlayers);
+			});
+		}
+
+		return filteredGames;
     };
     
     const renderBoardGame = (game: Record<string, any>) => {
@@ -54,7 +68,7 @@ export default function BoardGameGallery(props: BoardGameGalleryProps) {
         );
 		return (
     			<GridListTile key={game.id}>
-    				<img src={game.image} alt={game.name} />
+    				{/*<img src={game.image} alt={game.name} />*/}
     				<GridListTileBar title={title} />
     			</GridListTile>
 		);
@@ -63,7 +77,7 @@ export default function BoardGameGallery(props: BoardGameGalleryProps) {
 	return (
         <div className="board-game-gallery">
             <GridList cols={4} cellHeight={250}>
-        		{sortGames(props.games).map(renderBoardGame)}
+        		{sortGames(filterGames(props.games)).map(renderBoardGame)}
       		</GridList>
       	</div>
 	);

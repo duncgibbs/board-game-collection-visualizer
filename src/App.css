@@ -1,7 +1,5 @@
 .board-game-gallery {
-	overflow-y: scroll;
 	overflow-x: hidden;
-	height: 90vh;
 	margin: 5px 5px;
 }
 

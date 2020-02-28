@@ -4,7 +4,7 @@
 	display: flex;
 }
 
-.search-bar > .search-bar-input {
+.search-bar .search-bar-input {
 	color: #FF5100;
 	border-color: #FF5100;
     margin-right: 20px;
@@ -16,6 +16,24 @@
 	border-left: #FF5100 1px solid;
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+
+.username-search {
+    flex-grow: 2;
+}
+
+.filter-drawer-wrapper {
+	padding-bottom: 8px;
+}
+
+.filter-drawer-wrapper .MuiChip-root {
+	border-color: #FFF;
+	color: #FFF;
+	margin-left: 5px;
+}
+
+.filter-drawer-wrapper .search-bar-input {
+    height: 100%;
 }
 
 .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline {

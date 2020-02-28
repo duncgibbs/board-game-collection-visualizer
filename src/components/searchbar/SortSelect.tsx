@@ -25,8 +25,8 @@ export default function SortSelect(props: SortSelectProps) {
 	}, []);
 
 	return (
-        <FormControl variant="outlined">
-            <InputLabel ref={inputLabel} htmlFor="outlined-sort-native-simple">Sort</InputLabel>
+        <FormControl variant='outlined' className='search-bar-input collection-sort'>
+            <InputLabel ref={inputLabel} htmlFor='outlined-sort-native-simple'>Sort</InputLabel>
             <Select
                 native
                 value={props.currentSort}
@@ -38,7 +38,6 @@ export default function SortSelect(props: SortSelectProps) {
                     name: 'sort',
                     id: 'outlined-sort-native-simple',
                 }}
-                className={'search-bar-input'}
             >
                 {sortableColumns.map(sortable => {
                     return (

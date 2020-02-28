@@ -41,7 +41,7 @@ export default function SearchField(props: SearchFieldProps) {
 
     const renderSearchButton = () => {
         return (
-			<InputAdornment position="end">
+			<InputAdornment position='end'>
                 <IconButton
                 	onClick={() => updateUsername(search)}
                 	className='search-bar-button'
@@ -54,8 +54,8 @@ export default function SearchField(props: SearchFieldProps) {
     };
 
 	return (
-        <FormControl className='search-bar-input' variant='outlined'>
-            <InputLabel ref={inputLabel} htmlFor="username-search">Username</InputLabel>
+        <FormControl className='search-bar-input username-search' variant='outlined'>
+            <InputLabel ref={inputLabel} htmlFor='username-search'>Username</InputLabel>
 			<OutlinedInput
                 id='username-search'
                 value={search}
