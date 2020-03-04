@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/board-game-collection-visualizer/static/css/main.1d0f34d6.chunk.css",
-    "main.js": "/board-game-collection-visualizer/static/js/main.cc4a108d.chunk.js",
-    "main.js.map": "/board-game-collection-visualizer/static/js/main.cc4a108d.chunk.js.map",
+    "main.css": "/board-game-collection-visualizer/static/css/main.cfe968da.chunk.css",
+    "main.js": "/board-game-collection-visualizer/static/js/main.a02cc8c6.chunk.js",
+    "main.js.map": "/board-game-collection-visualizer/static/js/main.a02cc8c6.chunk.js.map",
     "runtime-main.js": "/board-game-collection-visualizer/static/js/runtime-main.9308b68e.js",
     "runtime-main.js.map": "/board-game-collection-visualizer/static/js/runtime-main.9308b68e.js.map",
-    "static/js/2.a78b53bb.chunk.js": "/board-game-collection-visualizer/static/js/2.a78b53bb.chunk.js",
-    "static/js/2.a78b53bb.chunk.js.map": "/board-game-collection-visualizer/static/js/2.a78b53bb.chunk.js.map",
+    "static/js/2.41be3c2f.chunk.js": "/board-game-collection-visualizer/static/js/2.41be3c2f.chunk.js",
+    "static/js/2.41be3c2f.chunk.js.map": "/board-game-collection-visualizer/static/js/2.41be3c2f.chunk.js.map",
     "index.html": "/board-game-collection-visualizer/index.html",
-    "precache-manifest.4d02bfd1231e680eca221e854e66d424.js": "/board-game-collection-visualizer/precache-manifest.4d02bfd1231e680eca221e854e66d424.js",
+    "precache-manifest.9936cbe53ac18663581787e0b36c098b.js": "/board-game-collection-visualizer/precache-manifest.9936cbe53ac18663581787e0b36c098b.js",
     "service-worker.js": "/board-game-collection-visualizer/service-worker.js",
-    "static/css/main.1d0f34d6.chunk.css.map": "/board-game-collection-visualizer/static/css/main.1d0f34d6.chunk.css.map",
-    "static/js/2.a78b53bb.chunk.js.LICENSE.txt": "/board-game-collection-visualizer/static/js/2.a78b53bb.chunk.js.LICENSE.txt"
+    "static/css/main.cfe968da.chunk.css.map": "/board-game-collection-visualizer/static/css/main.cfe968da.chunk.css.map",
+    "static/js/2.41be3c2f.chunk.js.LICENSE.txt": "/board-game-collection-visualizer/static/js/2.41be3c2f.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.9308b68e.js",
-    "static/js/2.a78b53bb.chunk.js",
-    "static/css/main.1d0f34d6.chunk.css",
-    "static/js/main.cc4a108d.chunk.js"
+    "static/js/2.41be3c2f.chunk.js",
+    "static/css/main.cfe968da.chunk.css",
+    "static/js/main.a02cc8c6.chunk.js"
   ]
 }
