@@ -60,7 +60,7 @@ export default function CheckListFilter(props: CheckListFilterProps) {
                 <Collapse in={seeAll} unmountOnExit>
 					{sortedOptions.slice(10).map(renderOptionCheckbox)}
                 </Collapse>
-                <Button onClick={() => setSeeAll(!seeAll)}>
+                <Button variant='outlined' onClick={() => setSeeAll(!seeAll)}>
 					{seeAll ? 'Hide' : 'See All'}
                 </Button>
             </div>

@@ -25,7 +25,7 @@ export default function SortSelect(props: SortSelectProps) {
 	}, []);
 
 	return (
-        <FormControl variant='outlined' className='search-bar-input collection-sort'>
+        <FormControl variant='outlined' className='search-bar-input collection-sort toolbar-button-container'>
             <InputLabel ref={inputLabel} htmlFor='outlined-sort-native-simple'>Sort</InputLabel>
             <Select
                 native

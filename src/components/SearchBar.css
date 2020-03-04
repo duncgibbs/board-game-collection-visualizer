@@ -4,10 +4,18 @@
 	display: flex;
 }
 
+.MuiToolbar-root {
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+
+.search-bar .toolbar-button-container {
+	margin: 5px;
+}
+
 .search-bar .search-bar-input {
 	color: #FF5100;
 	border-color: #FF5100;
-    margin-right: 20px;
 }
 
 .search-bar .search-bar-button {
@@ -18,12 +26,12 @@
 	padding-bottom: 15px;
 }
 
-.username-search {
+.search-bar-input.username-search {
     flex-grow: 2;
 }
 
 .filter-drawer-btn-wrapper {
-	padding-bottom: 8px;
+	height: 56px;
 }
 
 .filter-drawer-btn-wrapper .MuiChip-root {

@@ -55,6 +55,7 @@
 	color: #FF5100;
 	display: flex;
     justify-content: space-between;
+    padding: 10px 20px;
 }
 
 .filter-drawer-wrapper .close-btn {
@@ -63,5 +64,7 @@
 
 .filter-drawer-wrapper .check-list-container .MuiButton-root {
 	color: #FFF;
+	border-color: #FFF;
+    margin: 15px 10px;
 }
 

@@ -26,7 +26,7 @@ export default function FilterDrawer(props: FilterDrawerProps) {
     }, [filters, updateCollectionFilters]);
 
 	return (
-		<div className='filter-drawer-btn-wrapper'>
+		<div className='filter-drawer-btn-wrapper toolbar-button-container'>
         	<Button onClick={() => setDrawerOpen(true)} className='search-bar-input' variant='outlined'>
         		Filters
         		<Chip variant='outlined' size='small' label={filterNumber} />

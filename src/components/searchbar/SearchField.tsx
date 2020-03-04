@@ -54,7 +54,7 @@ export default function SearchField(props: SearchFieldProps) {
     };
 
 	return (
-        <FormControl className='search-bar-input username-search' variant='outlined'>
+        <FormControl className='search-bar-input username-search toolbar-button-container' variant='outlined'>
             <InputLabel ref={inputLabel} htmlFor='username-search'>Username</InputLabel>
 			<OutlinedInput
                 id='username-search'
