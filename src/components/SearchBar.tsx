@@ -34,8 +34,8 @@ export default function SearchBar(props: SearchBarProps) {
 	}, [username, updateCollection]);
 
 	return (
-		<AppBar>
-			<Toolbar className="search-bar">
+		<AppBar className='search-bar' position='sticky'>
+			<Toolbar>
                 <SearchField setUsername={setUsername} />
                 <SortSelect currentSort={props.collectionSort} selectSort={props.setCollectionSort} />
                 <FilterDrawer

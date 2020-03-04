@@ -1,6 +1,6 @@
 .search-bar {
 	padding: 10px 20px;
-	background: #3f3a60;
+	background: #3f3a60 !important;
 	display: flex;
 }
 
