@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import Chip from '@material-ui/core/Chip';
 import Button from '@material-ui/core/Button';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
+import Drawer from '@material-ui/core/Drawer';
 
 import FilterList from './filters/FilterList';
 
@@ -27,15 +27,18 @@ export default function FilterDrawer(props: FilterDrawerProps) {
 
 	return (
 		<div className='filter-drawer-btn-wrapper toolbar-button-container'>
-        	<Button onClick={() => setDrawerOpen(true)} className='search-bar-input' variant='outlined'>
+        	<Button
+        		disabled={props.collection.length ? false : true}
+        		onClick={() => setDrawerOpen(true)}
+        		className='search-bar-input'
+        		variant='outlined'>
         		Filters
         		<Chip variant='outlined' size='small' label={filterNumber} />
         	</Button>
-        	<SwipeableDrawer
+        	<Drawer
                 className='filter-drawer-wrapper'
         		open={drawerOpen}
         		onClose={() => setDrawerOpen(false)}
-        		onOpen={() => setDrawerOpen(true)}
         		anchor='bottom'
         	>
     			<FilterList
@@ -44,7 +47,7 @@ export default function FilterDrawer(props: FilterDrawerProps) {
     				setFilters={setFilters}
     				closeDrawer={() => setDrawerOpen(false)}
     			/>
-        	</SwipeableDrawer>
+        	</Drawer>
     	</div>
 	);
 };

@@ -3,6 +3,8 @@ import React from 'react';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faClock } from '@fortawesome/free-solid-svg-icons';
@@ -18,6 +20,26 @@ type BoardGameGalleryProps = {
 };
 
 export default function BoardGameGallery(props: BoardGameGalleryProps) {
+    const theme = useTheme();
+    const extraLarge = useMediaQuery(theme.breakpoints.only('xl'));
+    const large = useMediaQuery(theme.breakpoints.only('lg'));
+    const medium = useMediaQuery(theme.breakpoints.only('md'));
+    const small = useMediaQuery(theme.breakpoints.only('sm'));
+
+    const getColumnNum = () => {
+		if (extraLarge) {
+    		return 5;
+		} else if (large) {
+    		return 4;
+		} else if (medium) {
+    		return 3;
+		} else if (small) {
+    		return 2;
+		} else {
+    		return 1;
+		}
+    };
+
     const filteredSortedGames = BoardGameActions.sortBoardGames(
     	BoardGameActions.filterBoardGames(
     		props.games,
@@ -58,7 +80,7 @@ export default function BoardGameGallery(props: BoardGameGalleryProps) {
 
 	return (
         <div className="board-game-gallery">
-            <GridList cols={4} cellHeight={250}>
+            <GridList cols={getColumnNum()} cellHeight={250}>
         		{filteredSortedGames.map(renderBoardGame)}
       		</GridList>
       	</div>
