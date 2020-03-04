@@ -52,7 +52,7 @@ export default function CheckListFilter(props: CheckListFilterProps) {
     
 	return (
         <div className={props.classes}>
-        	<Typography variant='h6' gutterBottom>
+        	<Typography variant='h6' className='filter-list-item-title' gutterBottom>
         		{props.title}
             </Typography>
             <div className='check-list-container'>

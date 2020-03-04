@@ -3,6 +3,8 @@ import React from 'react';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListSubheader from '@material-ui/core/ListSubheader';
+import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 import RangeSliderFilter from './RangeSliderFilter';
 import YearPublishedFilter from './YearPublishedFilter';
@@ -35,17 +37,20 @@ export default function FilterList(props: FilterListProps) {
     	{
 			filter: 'playtime',
 			title: 'Play Time',
-			track: 'inverted',
+			track: 'normal',
 			step: 5,
 			range: {min: gameData.minPlayTime, max: gameData.maxPlayTime}
     	}
     ];
     const checklistFilters = ['category', 'mechanic', 'family', 'designer', 'artist', 'publisher'];
 
+    console.log(gameData);
+
     return (
-		<List>
+		<List disablePadding={true}>
 			<ListSubheader>
-				Filters
+				<Typography variant='h5'>Filters</Typography>
+				<Button onClick={props.closeDrawer} className='close-btn'>Close</Button>
 			</ListSubheader>
 			{rangeFilters.map(rangeFilter => {
 				return (

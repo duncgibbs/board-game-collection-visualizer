@@ -31,14 +31,15 @@ export default function YearPublishedFilter(props: YearPublishedFilterProps) {
 	};
     
 	return (
-		<div className='year-published-slider'>
-			<Typography id='range-slider' variant='h6' gutterBottom>
+		<div className='year-published-slider range-slider-filter'>
+			<Typography variant='h6' className='filter-list-item-title' gutterBottom>
 				Year Published
 			</Typography>
 			<Typography variant='subtitle1'>
 				{props.years[value[0]]} - {props.years[value[1]]}
     		</Typography>
             <Slider
+                id='range-slider'
                 value={value}
                 onChange={handleChange}
                 onChangeCommitted={handleChangeCommit}

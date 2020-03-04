@@ -1,0 +1,67 @@
+.filter-drawer-wrapper .MuiPaper-root.MuiDrawer-paper {
+	background: #3F3A60;
+    color: #FF5100;
+	border-color: #FF5100;
+}
+
+#range-slider .MuiSlider-rail {
+	color: #FFF;
+	opacity: 1;
+}
+
+#range-slider .MuiSlider-track {
+	color: #FF5100;
+}
+
+#range-slider .MuiSlider-mark {
+	color: #FF5100;
+}
+
+#range-slider .MuiSlider-thumb {
+	color: #FF5100;
+}
+
+.playtime-slider #range-slider .MuiSlider-markActive {
+	color: #FF5100;
+}
+
+.filter-drawer-wrapper .MuiListItem-root .range-slider-filter {
+	    width: 100%;
+        text-align: center;
+        padding: 0px 5%;
+}
+
+.filter-drawer-wrapper .MuiListItem-root .filter-list-item-title {
+	color: #FFF;
+	text-transform: capitalize;
+}
+
+.filter-drawer-wrapper .check-list-option .MuiChip-root {
+	color: #FFF;
+	border-color: #FFF;
+}
+
+.filter-drawer-wrapper .check-list-option .MuiFormControlLabel-root {
+	color: #FF5100;
+}
+
+.filter-drawer-wrapper .check-list-option .MuiCheckbox-root {
+	color: #FF5100;
+}
+
+.filter-drawer-wrapper .MuiListSubheader-root {
+	background: #3F3A60;
+	border-bottom: 1px solid #FF5100;
+	color: #FF5100;
+	display: flex;
+    justify-content: space-between;
+}
+
+.filter-drawer-wrapper .close-btn {
+	color: #FFF;
+}
+
+.filter-drawer-wrapper .check-list-container .MuiButton-root {
+	color: #FFF;
+}
+

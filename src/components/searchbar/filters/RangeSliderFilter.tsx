@@ -31,14 +31,15 @@ export default function RangeSliderFilter(props: RangeSliderFilterProps) {
 	};
     
 	return (
-		<div className={props.classes}>
-			<Typography id='range-slider' variant='h6' gutterBottom>
+		<div className={`${props.classes} range-slider-filter`}>
+			<Typography variant='h6' className='filter-list-item-title' gutterBottom>
 				{props.title}
 			</Typography>
 			<Typography variant='subtitle1'>
 				{value[0]} - {value[1]}
     		</Typography>
             <Slider
+                id='range-slider'
                 value={value}
                 onChange={handleChange}
                 onChangeCommitted={handleChangeCommit}

@@ -6,6 +6,8 @@ import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
 
 import FilterList from './filters/FilterList';
 
+import './FilterDrawer.css';
+
 type FilterDrawerProps = {
     collection: Array<Record<string, any>>;
 	setCollectionFilter: (test: Record<string, any>) => void;
@@ -24,12 +26,13 @@ export default function FilterDrawer(props: FilterDrawerProps) {
     }, [filters, updateCollectionFilters]);
 
 	return (
-		<div className='filter-drawer-wrapper'>
+		<div className='filter-drawer-btn-wrapper'>
         	<Button onClick={() => setDrawerOpen(true)} className='search-bar-input' variant='outlined'>
         		Filters
         		<Chip variant='outlined' size='small' label={filterNumber} />
         	</Button>
         	<SwipeableDrawer
+                className='filter-drawer-wrapper'
         		open={drawerOpen}
         		onClose={() => setDrawerOpen(false)}
         		onOpen={() => setDrawerOpen(true)}

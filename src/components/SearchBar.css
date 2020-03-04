@@ -22,17 +22,17 @@
     flex-grow: 2;
 }
 
-.filter-drawer-wrapper {
+.filter-drawer-btn-wrapper {
 	padding-bottom: 8px;
 }
 
-.filter-drawer-wrapper .MuiChip-root {
+.filter-drawer-btn-wrapper .MuiChip-root {
 	border-color: #FFF;
 	color: #FFF;
 	margin-left: 5px;
 }
 
-.filter-drawer-wrapper .search-bar-input {
+.filter-drawer-btn-wrapper .search-bar-input {
     height: 100%;
 }
 
