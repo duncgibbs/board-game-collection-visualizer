@@ -25,10 +25,15 @@ export default function FilterDrawer(props: FilterDrawerProps) {
 		updateCollectionFilters(filters);
     }, [filters, updateCollectionFilters]);
 
+    const disableFiltersButton = (
+    	(props.collection.length < 1) ||
+    	props.collection[0].hasOwnProperty('error')
+    );
+
 	return (
 		<div className='filter-drawer-btn-wrapper toolbar-button-container'>
         	<Button
-        		disabled={props.collection.length ? false : true}
+        		disabled={disableFiltersButton}
         		onClick={() => setDrawerOpen(true)}
         		className='search-bar-input'
         		variant='outlined'>

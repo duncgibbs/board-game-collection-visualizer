@@ -1,15 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
+import Drawer from '@material-ui/core/Drawer';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useTheme } from '@material-ui/core/styles';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faClock } from '@fortawesome/free-solid-svg-icons';
-
 import BoardGameActions from '../BoardGameActions';
+import BoardGameTile from './BoardGameTile';
+import BoardGameInspector from './BoardGameInspector';
 
 import './BoardGameGallery.css';
 
@@ -20,6 +19,8 @@ type BoardGameGalleryProps = {
 };
 
 export default function BoardGameGallery(props: BoardGameGalleryProps) {
+	const [selectedGameId, setSelectedGameId] = useState('' as string | null);
+
     const theme = useTheme();
     const extraLarge = useMediaQuery(theme.breakpoints.only('xl'));
     const large = useMediaQuery(theme.breakpoints.only('lg'));
@@ -49,33 +50,22 @@ export default function BoardGameGallery(props: BoardGameGalleryProps) {
     );
 
     const renderBoardGame = (game: Record<string, any>) => {
-        const title = (
-			<div className="game-info-bar">
-				<div className="title">{game.name}</div>
-				<div className="players">
-					<FontAwesomeIcon icon={faUser} />
-					{(game.minplayers === game.maxplayers) ? (
-    					`${game.minplayers}`
-    				) : (
-    					`${game.minplayers}-${game.maxplayers}`
-    				)}
-    			</div>
-    			<div className="time">
-					<FontAwesomeIcon icon={faClock} />
-					{(game.minplaytime === game.maxplaytime) ? (
-    					`${game.minplaytime}`
-    				) : (
-    					`${game.minplaytime}-${game.maxplaytime}`
-    				)}
-    			</div>
-			</div>
+        return (
+			<GridListTile key={game.id}>
+				<BoardGameTile game={game} onClick={() => setSelectedGameId(game.id)} />
+				<Drawer
+					className='board-game-inspector'
+					open={selectedGameId === game.id}
+					onClose={() => setSelectedGameId(null)}
+					anchor='bottom'
+				>
+					<BoardGameInspector game={game} closeDrawer={() => {
+    					setSelectedGameId(null);
+    					console.log(selectedGameId);
+    				}} />
+				</Drawer>
+			</GridListTile>
         );
-		return (
-    			<GridListTile key={game.id}>
-    				<img src={game.image} alt={game.name} />
-    				<GridListTileBar title={title} />
-    			</GridListTile>
-		);
 	};
 
 	return (

@@ -30,7 +30,7 @@ const getDataObjectFromThing = (thing: Element): CollectionDataObject => {
     return {
 		id: thing.getAttribute('id'),
 		name: thing.querySelector('name[type="primary"]')!.getAttribute('value'),
-		description: thing.getElementsByTagName('description')[0].innerHTML,
+		description: thing.getElementsByTagName('description')[0].innerHTML.replace(/&amp;#10;/g, '\n'),
 		image: thing.getElementsByTagName('image')[0].innerHTML,
         thumbnail: thing.getElementsByTagName('thumbnail')[0].innerHTML,
         yearpublished: getTagValue(thing, 'yearpublished'),

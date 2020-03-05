@@ -17,3 +17,52 @@
 .game-info-bar svg {
     margin-right: 5px;
 }
+
+.board-game-tile .bg-thumbnail {
+    width: 100%;
+}
+
+.inspector-container {
+	background: #3F3A60;
+}
+
+.inspector-container .close-btn {
+	color: #FFF;
+	border-color: #FFF;
+	position: fixed;
+    top: 3px;
+    right: 3px;
+    background: #3F3A60;
+    padding: 1px 3px;
+}
+
+.board-game-info {
+    padding-top: 3vh;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	color: #FF5100;
+}
+
+.board-game-info > div {
+	padding: 20px;
+	display: table-cell;
+	vertical-align: top;
+}
+
+.board-game-info > div > div {
+    color: #FF5100;
+    text-align: center;
+	padding-bottom: 10px;
+}
+
+.board-game-info > div > div > strong, .board-game-info .description strong {
+    color: #FFF;
+	font-size: 18px;
+	padding-bottom: 3px;
+}
+
+.board-game-info .cover img {
+    max-height: 50vh;
+}
+
