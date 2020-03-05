@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/board-game-collection-visualizer/static/css/main.a677becd.chunk.css",
-    "main.js": "/board-game-collection-visualizer/static/js/main.b0640565.chunk.js",
-    "main.js.map": "/board-game-collection-visualizer/static/js/main.b0640565.chunk.js.map",
+    "main.js": "/board-game-collection-visualizer/static/js/main.57b0b8ed.chunk.js",
+    "main.js.map": "/board-game-collection-visualizer/static/js/main.57b0b8ed.chunk.js.map",
     "runtime-main.js": "/board-game-collection-visualizer/static/js/runtime-main.9308b68e.js",
     "runtime-main.js.map": "/board-game-collection-visualizer/static/js/runtime-main.9308b68e.js.map",
     "static/js/2.25a769fd.chunk.js": "/board-game-collection-visualizer/static/js/2.25a769fd.chunk.js",
     "static/js/2.25a769fd.chunk.js.map": "/board-game-collection-visualizer/static/js/2.25a769fd.chunk.js.map",
     "index.html": "/board-game-collection-visualizer/index.html",
-    "precache-manifest.cbe4489d651a0a94888a2de67904657c.js": "/board-game-collection-visualizer/precache-manifest.cbe4489d651a0a94888a2de67904657c.js",
+    "precache-manifest.f629532908e309f4c9347eca2c1a4918.js": "/board-game-collection-visualizer/precache-manifest.f629532908e309f4c9347eca2c1a4918.js",
     "service-worker.js": "/board-game-collection-visualizer/service-worker.js",
     "static/css/main.a677becd.chunk.css.map": "/board-game-collection-visualizer/static/css/main.a677becd.chunk.css.map",
     "static/js/2.25a769fd.chunk.js.LICENSE.txt": "/board-game-collection-visualizer/static/js/2.25a769fd.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.9308b68e.js",
     "static/js/2.25a769fd.chunk.js",
     "static/css/main.a677becd.chunk.css",
-    "static/js/main.b0640565.chunk.js"
+    "static/js/main.57b0b8ed.chunk.js"
   ]
 }
