@@ -44,8 +44,6 @@ export default function FilterList(props: FilterListProps) {
     ];
     const checklistFilters = ['category', 'mechanic', 'family', 'designer', 'artist', 'publisher'];
 
-    console.log(gameData);
-
     return (
 		<List disablePadding={true}>
 			<ListSubheader>
